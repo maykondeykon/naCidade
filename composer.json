@@ -1,0 +1,56 @@
+{
+  "name": "IFMA/naCidade",
+  "description": "Aplicação desenvolvida para a cadeira de Gerênciamento de projetos do curso de SI do IFMA.",
+  "authors": [
+    {
+      "name": "Maykon Deykon",
+      "email": "maykondeykon@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Francisco Junior",
+      "email": "franciscomjunior@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Jouglas Willians",
+      "email": "jouli1204@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Ely Franklin",
+      "email": "elyfranklin@outlook.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Alan Delgado",
+      "email": "alandb@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "silex/silex": "1.0.*",
+    "symfony/http-kernel": "*",
+    "symfony/browser-kit": "*",
+    "symfony/console": "*",
+    "doctrine/dbal": "2.2.*",
+    "doctrine/orm": "*",
+    "doctrine/annotations": "1.2.4",
+    "twig/twig": ">=1.8,<2.0-dev",
+    "symfony/twig-bridge": "2.1.*",
+    "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev",
+    "entea/silex-twig-simple-asset-extension": "dev-master",
+    "zendframework/zend-stdlib": "2.4.*@dev",
+    "zendframework/zend-filter": "2.4.*@dev",
+    "zendframework/zend-servicemanager": "2.4.*@dev"
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  },
+  "config": {
+    "bin-dir": "scripts"
+  }
+}
