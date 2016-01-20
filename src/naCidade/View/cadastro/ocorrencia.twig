@@ -1,0 +1,46 @@
+{% extends 'layouts/base.twig' %}
+{% block content %}
+    <div id="addItem" class="form-container">
+        <fieldset>
+            <div id="message"></div>
+            <form method="post" action="js/contact-form.php" name="contactform" id="contactform">
+                <div class="form-group">
+                    <label for="item1">Tipo de Ocorrência *</label>
+                    <select id="item1" class="form-control">
+                        <option>Itens</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="texto">Descrição *</label>
+                    <textarea id="description" placeholder="" rows="3" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="radio">Problema Recorrente? *</label>
+                    <div class="radio">
+                        <label class="radio-inline">
+                            <input type="radio" name="radio" id="radio" value="sim">Sim
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio" id="radio" value="nao">Não
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="imagem">Adicionar Imagem</label>
+                    <input type="file" id="imagem">
+                </div>
+
+                <div class="form-group">
+                    <p class="small text-muted"><span class="guardsman">* Campos obrigatórios.</span></p>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" id="cf-submit" name="submit">Enviar</button>
+                </div>
+            </form>
+        </fieldset>
+    </div><!-- /.form-container -->
+{% endblock %}

@@ -14,8 +14,11 @@ class IndexController extends AbstractController
 
     public function index()
     {
-        echo 'Index Controller';
-        return new Response();
+        return $this->app['twig']->render('cadastro/ocorrencia.twig', array(
+        ));
+    }
+
+    public function tt(){
     }
 
 }
