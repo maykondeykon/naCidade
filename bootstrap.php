@@ -27,11 +27,11 @@ AnnotationRegistry::registerFile(__DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRE
 
 $params = array(
 //    'driverClass' => 'Lsw\DoctrinePdoDblib\Doctrine\DBAL\Driver\PDODblib\Driver',
-//    'host' => 'CORUSCANT',
+//    'host' => 'localhost',
 //    'port' => '1433',
-//    'user' => 'user_api',
-//    'password' => 'pwdapi2015',
-//    'dbname' => 'Db_Geral',
+//    'user' => 'user',
+//    'password' => 'pwd',
+//    'dbname' => 'Db_Name',
 //    'charset' => 'utf8'
 );
 

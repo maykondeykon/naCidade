@@ -35,7 +35,21 @@ class CadastroController extends AbstractController
 //        $assoc = $this->getAssociationMappingToArray($this->entity);
 //        $dados = $this->getAssociations($dados, $assoc);
 
-        var_dump($dados);
+        $this->uploadImagem(22);
+//        $this->app['request']->files->get('imagem')->setFileName('teste');
+        var_dump( $this->app['request']->files->get('imagem'));
+        return;
+    }
+
+    private function uploadImagem($idOcorrencia)
+    {
+        $request = $this->app['request'];
+
+        $imagem = $request->files->get('imagem');
+        $mimeType = $imagem->getMimeType();
+        $destino = __DIR__ . '/../../../public/upload/';
+        $imagem->move($destino, $idOcorrencia   );
+
         return;
     }
 
