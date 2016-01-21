@@ -1,4 +1,5 @@
 <?php
+use naCidade\Controller\CadastroController;
 use naCidade\Controller\IndexController;
 
 require_once __DIR__ . "/bootstrap.php";
@@ -8,6 +9,10 @@ require_once __DIR__ . "/bootstrap.php";
  */
 $app['index.controller'] = $app->share(function () use ($app) {
     return new IndexController($app);
+});
+
+$app['cadastro.controller'] = $app->share(function () use ($app) {
+    return new CadastroController($app);
 });
 
 /**
@@ -20,6 +25,14 @@ $app->get('/{action}', function ($action) use ($app) {
         throw new Exception('Conteúdo não existente.');
     }
 })->value('action', 'index');
+
+$app->match('/cadastro/{action}', function ($action) use ($app) {
+    if (method_exists($app['cadastro.controller'], "{$action}")) {
+        return $app['cadastro.controller']->$action();
+    } else {
+        throw new Exception('Conteúdo não existente.');
+    }
+})->value('action', 'ocorrencia')->method('GET|POST');
 
 /**
  * Método para captura de exceções

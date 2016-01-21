@@ -10,6 +10,7 @@ class IndexController extends AbstractController
     public function __construct($app)
     {
         $this->app = $app;
+//        $this->em = $app['em'];
     }
 
     public function index()
