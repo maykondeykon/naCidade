@@ -1,0 +1,28 @@
+{% extends 'layouts/base.twig' %}
+{% block content %}
+    <div id="login-screen" class="form-container">
+        <h1>Login</h1>
+        <fieldset>
+            <div id="message"></div>
+            <form method="post" action="#" name="loginForm" id="loginForm">
+
+                <div class="form-group">
+                    <label for="imagem">Login</label>
+                    <input type="text" id="login">
+                </div>
+
+                <div class="form-group">
+                    <label for="imagem">Senha</label>
+                    <input type="password" id="senha">
+                </div>
+
+                <div class="form-group">
+                    <p class="small text-muted"><span class="guardsman"><a href="#">Esqueceu a senha?</a></span></p>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" id="cf-submit" name="submit">Enviar</button>
+                </div>
+            </form>
+        </fieldset>
+    </div><!-- /.form-container -->
+{% endblock %}

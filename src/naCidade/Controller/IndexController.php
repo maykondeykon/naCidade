@@ -15,11 +15,14 @@ class IndexController extends AbstractController
 
     public function index()
     {
-        return $this->app['twig']->render('cadastro/ocorrencia.twig', array(
+        return $this->app['twig']->render('index/ocorrencias.twig', array(
         ));
     }
 
-    public function tt(){
+    public function login()
+    {
+        return $this->app['twig']->render('index/login.twig', array(
+        ));
     }
 
 }

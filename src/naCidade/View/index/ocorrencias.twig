@@ -1,0 +1,31 @@
+{% extends 'layouts/base.twig' %}
+{% block content %}
+
+    <h1>Ocorrências</h1>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Tipo de Ocorrência<span class="label label-default pull-right">0</span></h3>
+            <h3>Tipo de Ocorrência <span class="label label-primary pull-right">10</span></h3>
+            <h3>Tipo de Ocorrência <span class="label label-warning pull-right">20</span></h3>
+            <h3>Tipo de Ocorrência <span class="label label-danger pull-right">100</span></h3>
+        </div>
+        <div class="col-sm-12 imagem-ocorrencia">
+            <img src="http://placehold.it/900x250" class="img-responsive">
+        </div>
+        <div class="caption col-sm-12">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error aliquam praesentium, omnis quo eveniet
+                vel reiciendis! Ipsa, consequatur rem illo quam incidunt consectetur ipsum. Temporibus ratione ex magnam
+                iste deleniti.</p>
+        </div>
+
+
+        <form method="post" action="" name="ocorrenciaForm" id="ocorrenciaForm">
+
+            <div class="form-group col-sm-12">
+                <button type="button" class="btn btn-danger">Curtir</button>
+                <a href="/cadastro/ocorrencia" type="button" class="btn btn-primary">Adicionar</a>
+            </div>
+        </form>
+
+    </div>
+{% endblock %}
